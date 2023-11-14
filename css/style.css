@@ -2,19 +2,69 @@
     RESET
 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* 
     GENERAL
 */
 html {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  background-color: #0084fd;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 50px;
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+header .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row ul {
+  display: flex;
+  gap: 30px;
+}
+.menu-mobile {
+  display: none;
+}
+
+main .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  border: 1px solid;
+  width: 30%;
+  text-align: center;
+}
+.col-2 {
+  flex: 60%;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .container .navbar-links {
+    display: none;
+  }
+  .container .menu-mobile {
+    display: block;
+    color: white;
+  }
 }
