@@ -42,22 +42,31 @@ header .row {
   display: none;
 }
 
+/* Main */
+
 main .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  margin: 30px;
+  gap: 20px;
 }
 
 .card {
   border: 1px solid;
-  width: 30%;
   text-align: center;
+  flex: 1;
 }
 .col-2 {
-  flex: 60%;
+  flex: 2;
+  display: flex;
+  gap: 20px;
+}
+.col-2 img {
+  width: 100%;
 }
 
 /* Media Queries */
+/* Tablet */
 
 @media (max-width: 768px) {
   .container .navbar-links {
@@ -66,5 +75,19 @@ main .row {
   .container .menu-mobile {
     display: block;
     color: white;
+  }
+}
+
+/* Media Queries */
+/* Mobile */
+@media (max-width: 480px) {
+  .row .card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 100%;
+  }
+  .row .col-2 {
+    display: flex;
+    flex-direction: column;
   }
 }
