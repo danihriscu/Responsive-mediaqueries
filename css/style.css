@@ -6,7 +6,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+:root {
+  --main-color: #9792e4;
+  --main-width: 1200px;
+}
 /* 
     GENERAL
 */
@@ -17,7 +20,7 @@ header {
   background-color: #0084fd;
 }
 .container {
-  max-width: 1200px;
+  max-width: var(--main-width);
   margin: 0 auto;
   padding: 10px 50px;
 }
@@ -66,7 +69,7 @@ main .row {
 }
 /* Section */
 section {
-  background-color: #9792e4;
+  background-color: var(--main-color);
 }
 section .small-container {
   width: 1000px;
@@ -130,9 +133,11 @@ section .img-section2 .arrow {
   height: 50px;
 }
 /* Article */
-
+article {
+  padding: 100px;
+}
 article .container {
-  max-width: 1200px;
+  max-width: var(--main-width);
   margin: 0 auto;
 }
 article .testimonial {
@@ -141,9 +146,8 @@ article .testimonial {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 50px;
 }
-article .testimonial h3 {
+article h3 {
   color: #9792e4;
   font-size: 2rem;
   padding: 30px;
@@ -157,7 +161,7 @@ article .card {
   padding: 30px 10px;
 }
 
-article .card .img-testimonial {
+article .img-testimonial {
   display: flex;
   width: 200px;
   height: 200px;
@@ -165,24 +169,25 @@ article .card .img-testimonial {
   align-items: center;
   flex-shrink: 0;
 }
-article .card img {
+article img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
-article .card .description-testimonial {
+article .description-testimonial {
   display: flex;
   flex-direction: column;
-  flex-grow: 0;
+  flex-grow: 1;
   justify-content: center;
 }
-article .card .description-testimonial p,
+article p,
 h4 {
   text-align: start;
   line-height: 2rem;
   padding: 10px 40px;
 }
+/* Section part 2 */
 section .container > h3 {
   text-align: center;
   font-size: 2rem;
@@ -209,11 +214,11 @@ section .container .containter-cards > .card {
 }
 section .container .containter-cards .card h4 {
   padding: 0;
-  color: #9792e4;
+  color: var(--main-color);
   padding-top: 20px;
 }
 section .container .containter-cards .card h2 {
-  color: #9792e4;
+  color: var(--main-color);
   font-size: 3.5rem;
 }
 section .container .containter-cards .card p {
@@ -222,12 +227,50 @@ section .container .containter-cards .card p {
 }
 section .container .containter-cards .card button {
   color: white;
-  background-color: #9792e4;
+  background-color: var(--main-color);
   width: 50%;
   border-radius: 30px;
   border: none;
   padding: 10px 20px;
 }
+.flex {
+  display: flex;
+}
+
+.help-companies h4 {
+  color: var(--main-color);
+  font-size: 1.5rem;
+}
+
+.help-companies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-shrink: 1;
+}
+.flex .description-testimonial {
+  justify-content: center;
+  align-items: center;
+}
+.help-companies button {
+  padding: 10px 0px;
+  width: 80%;
+  margin-top: 20px;
+  border-radius: 25px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  font-size: 1rem;
+}
+.about-us h2 {
+  font-size: 3rem;
+  color: var(--main-color);
+  padding: 0px 40px 40px 40px;
+}
+
+/* Article Part2 */
 
 /* Media Queries */
 /* Tablet */
