@@ -130,8 +130,9 @@ section .img-section2 .arrow {
   height: 50px;
 }
 /* Article */
+
 article .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 article .testimonial {
@@ -173,7 +174,7 @@ article .card img {
 article .card .description-testimonial {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex-grow: 0;
   justify-content: center;
 }
 article .card .description-testimonial p,
@@ -182,11 +183,19 @@ h4 {
   line-height: 2rem;
   padding: 10px 40px;
 }
-section .container .row-cards {
+section .container > h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  padding: 50px;
+}
+section .container .containter-cards {
   display: flex;
+  width: 100%;
+  flex-wrap: wrap;
   gap: 30px;
 }
-section .container .containter-cards .card {
+section .container .containter-cards > .card {
   display: flex;
   border-radius: 20px;
   border: none;
@@ -195,9 +204,29 @@ section .container .containter-cards .card {
   flex-direction: column;
   text-align: start;
   padding: 25px;
+  flex: none;
+  width: calc((100% / 3) - 20px);
 }
 section .container .containter-cards .card h4 {
   padding: 0;
+  color: #9792e4;
+  padding-top: 20px;
+}
+section .container .containter-cards .card h2 {
+  color: #9792e4;
+  font-size: 3.5rem;
+}
+section .container .containter-cards .card p {
+  line-height: 1.5rem;
+  padding: 25px 0;
+}
+section .container .containter-cards .card button {
+  color: white;
+  background-color: #9792e4;
+  width: 50%;
+  border-radius: 30px;
+  border: none;
+  padding: 10px 20px;
 }
 
 /* Media Queries */
@@ -211,11 +240,8 @@ section .container .containter-cards .card h4 {
     display: block;
     color: white;
   }
-  .container {
-    width: 100%;
-    padding: 10px;
-  }
-  section .container {
+
+  section .small-container {
     width: 100%;
     padding: 30px;
   }
@@ -240,6 +266,13 @@ section .container .containter-cards .card h4 {
     width: 100%;
     padding: 30px;
   }
+  section .container .containter-cards {
+    gap: 20px;
+    justify-content: center;
+  }
+  section .container .containter-cards > .card {
+    width: calc((100% / 2) - 20px);
+  }
 }
 
 /* Media Queries */
@@ -250,11 +283,19 @@ section .container .containter-cards .card h4 {
     flex-direction: column;
     flex: 1 100%;
   }
+  .container .navbar-links {
+    display: none;
+  }
+  .container .menu-mobile {
+    display: block;
+    color: white;
+  }
+
   .row .col-2 {
     display: flex;
     flex-direction: column;
   }
-  section .container {
+  section .small-container {
     width: 100%;
     padding: 30px;
   }
@@ -278,5 +319,8 @@ section .container .containter-cards .card h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  section .container .containter-cards > .card {
+    width: 100%;
   }
 }
